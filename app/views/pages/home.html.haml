@@ -15,7 +15,7 @@
 		%div{:class=>"box color-#{i+2}"}
 			-#, :style=>"height: #{footprint[:percentage_in_set]}%;"}
 			.sidebar
-				=image_tag "/images/profile_pics/#{footprint[:name].downcase.gsub(/\s+/, '').capitalize}.jpg"
+				=image_tag "/images/profile_pics/#{footprint[:name].downcase.gsub(/\s+/, '')}.jpg"
 			.boxContent	
 				%h3.name=footprint[:name]
 				.datapoints
