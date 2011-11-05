@@ -1,4 +1,4 @@
-require 'compass-colors'
+# require 'compass-colors'
 
 sass_dir = "app/assets/stylesheets"
 javascripts_dir = "public/javascripts"
