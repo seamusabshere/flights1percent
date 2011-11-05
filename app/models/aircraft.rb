@@ -7,6 +7,7 @@ class Aircraft < ActiveRecord::Base
   # col :model_name
   
   belongs_to :model, :class_name => 'AircraftModel', :foreign_key => 'manufacturer_model_code'
+  has_many :flights, :foreign_key => 'tail_number'
   
   data_miner do
     process "make sure models have been populated" do

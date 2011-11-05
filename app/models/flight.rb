@@ -107,7 +107,8 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
   end
 
   def self.set_emissions
-    where(arel_table[:carbon_object_value].eq(nil)).each do |f|
+    while f = where(arel_table[:carbon_object_value].eq(nil)).order('random()').first
+      puts f.send(:request).inspect
       f.set_emissions
       puts "Emission set for #{f.row_hash}: #{f.carbon_object_value}"
     end
@@ -129,16 +130,17 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
     hsh = if (saved_emission_data = raw_emission_data)
       ::MultiJson.decode saved_emission_data
     else
-      live_query_response = begin; ::BrighterPlanetApi.cm1.query(request); rescue; { :error => $!.inspect }; end
-      self.emission_data = live_query_response
-      self.carbon_object_value = live_query_response.decisions.try(:carbon).try(:object).try(:value)
-      live_query_response
+      begin
+        live_query_response = ::BrighterPlanetApi.cm1.query(request)
+        self.emission_data = live_query_response
+        self.carbon_object_value = live_query_response.decisions.try(:carbon).try(:object).try(:value)
+        live_query_response
+      rescue
+        puts "blew up"
+      end
     end
     ::Hashie::Mash.new hsh
   end
-
-  #::HTTPClient.get url
-  #       ::Hashie::Mash.new ::MultiJson.decode(response.body)
 
   def origin_airport
     wsj_data.DEPCODE
@@ -149,7 +151,11 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
   end
 
   def emission
-    emission_data.decisions.carbon.object.value
+    carbon_object_value
+  end
+  
+  def date
+    Time.parse wsj_data.ARRDATE
   end
   
   private
@@ -161,7 +167,9 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
       :destination_airport => destination_airport,
       :trips => 1,
       :segments_per_trip => 1,
-      :aircraft => aircraft.name
+      :aircraft => aircraft.name,
+      :seats_estimate => 5,
+      :load_factor => 1
     }
   end
 end
