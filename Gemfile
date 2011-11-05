@@ -7,6 +7,12 @@ gem 'rails', '3.0.10'
 
 gem 'sqlite3'
 
+gem 'haml'
+gem 'hashie'
+gem 'typhoeus'
+gem 'json'
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -29,3 +35,4 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
