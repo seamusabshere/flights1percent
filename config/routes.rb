@@ -1,5 +1,9 @@
 Flights1percent::Application.routes.draw do
 
+  resources :aircraft_models
+
+  resources :aircraft
+
   resources :flights
 
   # The priority is based upon order of creation:
