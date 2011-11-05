@@ -11,11 +11,12 @@ gem 'haml'
 gem 'hashie'
 #gem 'json'
 gem 'multi_json'
-gem 'typhoeus'
+gem 'httpclient'
 gem 'brighter_planet_api', '0.0.1'
 gem 'mini_record-compat', :git => 'https://github.com/seamusabshere/mini_record.git', :branch => 'alt_gem', :require => 'mini_record'
 gem 'hash_digest'
 gem 'data_miner', :git => 'https://github.com/seamusabshere/data_miner.git'
+gem 'escape'
 
 # Use unicorn as the web server
 # gem 'unicorn'
