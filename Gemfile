@@ -9,9 +9,9 @@ gem 'sqlite3'
 
 gem 'haml'
 gem 'hashie'
+#gem 'json'
+gem 'multi_json'
 gem 'typhoeus'
-gem 'json'
-
 
 # Use unicorn as the web server
 # gem 'unicorn'
