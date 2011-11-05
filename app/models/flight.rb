@@ -32,10 +32,11 @@ class Flight < ActiveRecord::Base
     count = flights['meta']['totalcount']
     pages = (count.to_i / 50)
     # Iterate through the remaining pages
-#    (1..pages).each do |page|
-#      flights = flight_results(company, tns, page)
-#      save_flights(flights)
-#    end if (pages > 0)
+    (1..pages).each do |page|
+      flights = flight_results(company, tns, page)
+      save_flights(flights)
+      sleep(3)
+    end if (pages > 0)
   end
 
   def self.save_flights(flights)
@@ -47,9 +48,12 @@ class Flight < ActiveRecord::Base
   end
 
   # BLANCA%20PALOMA%2C%20LLC
+  #http://projects.wsj.com/jettracker/flights.php?op=BLANCA%20PALOMA%2C%20LLC&tag=N901SG&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=1&sort=d
   def self.flight_results(company, tail_numbers, page = 0)
+    url = "http://projects.wsj.com/jettracker/flights.php?op=#{CGI.escape(company).gsub('+', '%20')}&tag=#{tail_numbers}&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=#{page}&sort=d"
+    logger.debug url
     request2 = Typhoeus::Request.get(
-      "http://projects.wsj.com/jettracker/flights.php?op=#{CGI.escape(company).gsub('+', '%20')}&tag=#{tail_numbers}&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=#{page}&sort=d",
+      url,
         :headers       => {:Accept => "application/json"},
         :timeout       => 10000, # milliseconds
         :user_agent    => USER_AGENT,
