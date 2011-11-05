@@ -8,10 +8,11 @@ gem 'hashie'
 gem 'typhoeus'
 gem 'json'
 gem "jammit"
+gem "compass"
+gem "compass-colors"	
+
 
 group :development, :test do
-	gem "compass"
-	gem "compass-colors"	
 	gem "guard-coffeescript"
 	gem 'ruby-debug19', :require => 'ruby-debug'
 end
