@@ -11,7 +11,7 @@ class Flight < ActiveRecord::Base
   # BLANCA+PALOMA%2C+LLC
   def self.tail_numbers(company)
     request = Typhoeus::Request.get(
-      "http://projects.wsj.com/jettracker/autocomplete_lookup.php?term=#{company}&col=tag_op",
+      "http://projects.wsj.com/jettracker/autocomplete_lookup.php?term=#{CGI.escape(company)}&col=tag_op",
         :headers       => {:Accept => "application/json"},
         :timeout       => 10000, # milliseconds
         :user_agent    => USER_AGENT,
@@ -49,7 +49,7 @@ class Flight < ActiveRecord::Base
   # BLANCA%20PALOMA%2C%20LLC
   def self.flight_results(company, tail_numbers, page = 0)
     request2 = Typhoeus::Request.get(
-      "http://projects.wsj.com/jettracker/flights.php?op=#{company}&tag=#{tail_numbers}&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=#{page}&sort=d",
+      "http://projects.wsj.com/jettracker/flights.php?op=#{CGI.escape(company).gsub('+', '%20')}&tag=#{tail_numbers}&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=#{page}&sort=d",
         :headers       => {:Accept => "application/json"},
         :timeout       => 10000, # milliseconds
         :user_agent    => USER_AGENT,
