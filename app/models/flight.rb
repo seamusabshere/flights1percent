@@ -5,6 +5,7 @@ class Flight < ActiveRecord::Base
   col :row_hash
   col :raw_wsj_data, :type => :text
   col :raw_emission_data, :type => :text
+  col :tail_number
 
   USER_AGENT = "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.23) Gecko/20110921 Ubuntu/10.10 (maverick) Firefox/3.6.23"
 
@@ -26,42 +27,43 @@ class Flight < ActiveRecord::Base
     tail_numbers = response.collect{ |x| x['text']}.join(",")
   end
 
-  def self.pull(company)
+  def self.pull(tn)
     # cache tail numbers
-    tns = tail_numbers(company)
+    #tns = tail_numbers(company)
     # Get and save the first page of flights so
     # we can get the total count
-    flights = flight_results(company, tns, 0)
-    save_flights(flights)
+    flights = flight_results(tn, 0)
+    save_flights(flights, tn)
     # Determine how many pages there are
     count = flights['meta']['totalcount']
     pages = (count.to_i / 50)
     # Iterate through the remaining pages
     (1..pages).each do |page|
-      flights = flight_results(company, tns, page)
-      save_flights(flights)
+      flights = flight_results(tn, page)
+      save_flights(flights, tn)
       sleep(10)
     end if (pages > 0)
   end
 
-  def self.save_flights(flights)
+  def self.save_flights(flights, tn)
     flights['results'].each do |wsj_data|
       flight = find_or_initialize_by_row_hash HashDigest.hexdigest(wsj_data)
       flight.wsj_data = wsj_data
+      flight.tail_number = tn
       flight.save!
     end
   end
 
   # BLANCA%20PALOMA%2C%20LLC
   #http://projects.wsj.com/jettracker/flights.php?op=BLANCA%20PALOMA%2C%20LLC&tag=N901SG&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=1&sort=d
-  def self.flight_results(company, tail_numbers, page = 0)
+  def self.flight_results(tn, page = 0)
 
     header = { 'Accept' => 'application/json',
                  'Referer' => "http://projects.wsj.com/jettracker/",
                  'User-Agent' => USER_AGENT
                }
 
-      query = { 'op' => CGI.escape(company).gsub('+', '%20'), 'tag' => tail_numbers, 'p' => page, 'sort' => 'd'}
+      query = { 'op' => '', 'tag' => tn, 'p' => page, 'sort' => 'd'}
 
       request2 = HTTPClient.get(
             "http://projects.wsj.com/jettracker/flights.php",

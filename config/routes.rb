@@ -1,5 +1,7 @@
 Flights1percent::Application.routes.draw do
 
+  resources :people
+
   resources :aircraft_models
 
   resources :aircraft
