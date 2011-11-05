@@ -1,0 +1,1 @@
+Flight.auto_upgrade!
