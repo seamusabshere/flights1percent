@@ -11,6 +11,7 @@ gem "jammit"
 
 group :development, :test do
 	gem "compass"
+	gem "compass-colors"	
 	gem "guard-coffeescript"
 	gem 'ruby-debug19', :require => 'ruby-debug'
 end
