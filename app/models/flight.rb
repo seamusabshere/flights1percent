@@ -7,6 +7,8 @@ class Flight < ActiveRecord::Base
   col :raw_emission_data, :type => :text
   col :tail_number
   col :carbon_object_value, :type => :float
+  
+  belongs_to :aircraft, :foreign_key => 'tail_number'
 
 TAILS = %w(
 N846QM N813QS
@@ -149,7 +151,7 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
   def emission
     emission_data.decisions.carbon.object.value
   end
-
+  
   private
 
   def request
@@ -158,7 +160,8 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
       :origin_airport => origin_airport,
       :destination_airport => destination_airport,
       :trips => 1,
-      :segments_per_trip => 1
+      :segments_per_trip => 1,
+      :aircraft => aircraft.name
     }
   end
 end

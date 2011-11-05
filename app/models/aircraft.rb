@@ -24,8 +24,12 @@ class Aircraft < ActiveRecord::Base
                   [ 'spacer',  1 ],
                   [ 'manufacturer_model_code', 7, { :type => :string } ]]
       ) do
-      key 'tail_number'
+      key 'tail_number' # FIXME prefix N
       store 'manufacturer_model_code'
     end
+  end
+  
+  def name
+    [model.manufacturer_name, model.model_name].join(' ')
   end
 end
