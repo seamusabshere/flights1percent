@@ -10,13 +10,18 @@ class Flight < ActiveRecord::Base
 
   # BLANCA+PALOMA%2C+LLC
   def self.tail_numbers(company)
-    request = Typhoeus::Request.get(
-      "http://projects.wsj.com/jettracker/autocomplete_lookup.php?term=#{CGI.escape(company)}&col=tag_op",
-        :headers       => {:Accept => "application/json"},
-        :timeout       => 10000, # milliseconds
-        :user_agent    => USER_AGENT,
-        :referrer      => "http://projects.wsj.com/jettracker/"
-      )
+    header = { 'Accept' => 'application/json',
+                 'Referer' => "http://projects.wsj.com/jettracker/",
+                 'User-Agent' => USER_AGENT
+               }
+
+      query = { 'term' => company, 'col' => 'tag_op'}
+
+      request = HTTPClient.get(
+            "http://projects.wsj.com/jettracker/autocomplete_lookup.php",
+            query, header
+            )
+
     response = JSON.parse(request.body)
     tail_numbers = response.collect{ |x| x['text']}.join(",")
   end
@@ -35,7 +40,7 @@ class Flight < ActiveRecord::Base
     (1..pages).each do |page|
       flights = flight_results(company, tns, page)
       save_flights(flights)
-      sleep(3)
+      sleep(10)
     end if (pages > 0)
   end
 
@@ -50,15 +55,19 @@ class Flight < ActiveRecord::Base
   # BLANCA%20PALOMA%2C%20LLC
   #http://projects.wsj.com/jettracker/flights.php?op=BLANCA%20PALOMA%2C%20LLC&tag=N901SG&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=1&sort=d
   def self.flight_results(company, tail_numbers, page = 0)
-    url = "http://projects.wsj.com/jettracker/flights.php?op=#{CGI.escape(company).gsub('+', '%20')}&tag=#{tail_numbers}&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=#{page}&sort=d"
-    logger.debug url
-    request2 = Typhoeus::Request.get(
-      url,
-        :headers       => {:Accept => "application/json"},
-        :timeout       => 10000, # milliseconds
-        :user_agent    => USER_AGENT,
-        :referrer      => "http://projects.wsj.com/jettracker/"
-      )
+
+    header = { 'Accept' => 'application/json',
+                 'Referer' => "http://projects.wsj.com/jettracker/",
+                 'User-Agent' => USER_AGENT
+               }
+
+      query = { 'op' => CGI.escape(company).gsub('+', '%20'), 'tag' => tail_numbers, 'p' => page, 'sort' => 'd'}
+
+      request2 = HTTPClient.get(
+            "http://projects.wsj.com/jettracker/flights.php",
+            query, header
+            )
+
     flights = MultiJson.decode(request2.body)
   end
 
