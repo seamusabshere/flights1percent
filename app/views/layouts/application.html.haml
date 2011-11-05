@@ -2,7 +2,8 @@
 %html.no-js{:lang => "en"}
 	=render "layouts/head"
 	%body
-		
-		=yield
+		.container
+			%article.content
+				=yield
 							
 		=render "layouts/javascripts"

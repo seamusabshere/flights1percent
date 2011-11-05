@@ -2,5 +2,5 @@ class Application
 	constructor: ->
 		
 	start: ->
-		console.log 'App started'
+		console.log 'App started'  
 @Application = Application

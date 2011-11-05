@@ -1,0 +1,6 @@
+window do
+  tab "rails s"
+  tab "compass watch"
+  tab "guard"
+end
+

@@ -1,10 +1,32 @@
 @include blueprint-typography;
 
-body{	
-	background:none;
-	font-family: Helvetica, sans;
-}
 .content{
 	width:100%;
 }
+
+
+//MIXINS
+@mixin pinboxStyleBox{
+	$pinboxStyleBoxWidth: 300px;
+	.container{
+		width:100%;
+		padding: 5px;
+		margin: 0 auto;
+		height: 1000px;
+		width: 6 * ($pinboxStyleBoxWidth + 13px) + 12px; 
+	}
+	.box{
+		padding:5px;
+		margin: 0 3px 3px 0;
+		border: dotted #ddd 1px;
+		float:left;
+		width: $pinboxStyleBoxWidth;
+	}
+}
+body{
+	@include pinboxStyleBox;
+}
+
+
+
 
