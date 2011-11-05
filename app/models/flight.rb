@@ -1,5 +1,7 @@
 class Flight < ActiveRecord::Base
+  set_primary_key :row_hash
   
+  col :row_hash
   col :raw_wsj_data, :type => :text
   col :raw_emission_data, :type => :text
 
@@ -25,7 +27,8 @@ class Flight < ActiveRecord::Base
     flights = MultiJson.decode(request2.body)
 
     flights['results'].each do |wsj_data|
-      flight = new :wsj_data => wsj_data.to_hash
+      flight = find_or_initialize_by_row_hash HashDigest.hexdigest(wsj_data)
+      flight.wsj_data = wsj_data
       flight.save!
     end
     
