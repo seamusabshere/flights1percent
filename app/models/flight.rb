@@ -6,8 +6,34 @@ class Flight < ActiveRecord::Base
   col :raw_wsj_data, :type => :text
   col :raw_emission_data, :type => :text
   col :tail_number
+  col :carbon_object_value, :type => :float
+
+TAILS = %w(
+N846QM N813QS
+N531AF N724AF N757AF
+N145K N245K N265K N302K N345K N532GP N545K N745K
+N1KE
+N1EB
+N48JA
+N718MC
+N54SL
+N707JT N492JT
+N2N
+N1AG
+N477JB
+N47EG N5MV N900MV
+N610AB
+N56L N889NC N89NC
+N608WM N134WM N194WM N307MD N387WM N887WM )
 
   USER_AGENT = "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.23) Gecko/20110921 Ubuntu/10.10 (maverick) Firefox/3.6.23"
+
+  def self.flight_count
+    TAILS.each do |tail|
+      cnt = where(tail_number: tail).count
+      puts "#{tail}: #{cnt}"
+    end
+  end
 
   # BLANCA+PALOMA%2C+LLC
   def self.tail_numbers(company)
@@ -78,6 +104,13 @@ class Flight < ActiveRecord::Base
     save!
   end
 
+  def self.set_emissions
+    where(arel_table[:carbon_object_value].eq(nil)).each do |f|
+      f.set_emissions
+      puts "Emission set for #{f.row_hash}: #{f.carbon_object_value}"
+    end
+  end
+
   def wsj_data
     ::Hashie::Mash.new ::MultiJson.decode(raw_wsj_data)
   end
@@ -96,6 +129,7 @@ class Flight < ActiveRecord::Base
     else
       live_query_response = begin; ::BrighterPlanetApi.cm1.query(request); rescue; { :error => $!.inspect }; end
       self.emission_data = live_query_response
+      self.carbon_object_value = live_query_response.decisions.try(:carbon).try(:object).try(:value)
       live_query_response
     end
     ::Hashie::Mash.new hsh
@@ -122,7 +156,9 @@ class Flight < ActiveRecord::Base
     {
       :emitter => 'Flight',
       :origin_airport => origin_airport,
-      :destination_airport => destination_airport
+      :destination_airport => destination_airport,
+      :trips => 1,
+      :segments_per_trip => 1
     }
   end
 end
