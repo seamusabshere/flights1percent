@@ -1,6 +1,10 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    POpen4 (0.1.4)
+      Platform (>= 0.4.0)
+      open4
+    Platform (0.4.0)
     abstract (1.0.0)
     actionmailer (3.0.10)
       actionpack (= 3.0.10)
@@ -54,6 +58,8 @@ GEM
     haml (3.1.2)
     hashie (1.2.0)
     i18n (0.5.0)
+    jammit (0.6.3)
+      yui-compressor (>= 0.9.3)
     json (1.6.1)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
@@ -64,6 +70,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.3)
+    open4 (1.1.0)
     polyglot (0.3.3)
     rack (1.2.4)
     rack-mount (0.6.14)
@@ -106,6 +113,8 @@ GEM
     typhoeus (0.3.2)
       mime-types
     tzinfo (0.3.30)
+    yui-compressor (0.9.6)
+      POpen4 (>= 0.1.4)
 
 PLATFORMS
   ruby
@@ -115,6 +124,7 @@ DEPENDENCIES
   guard-coffeescript
   haml
   hashie
+  jammit
   json
   rails (= 3.0.10)
   ruby-debug19

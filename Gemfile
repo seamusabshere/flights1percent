@@ -7,6 +7,7 @@ gem 'haml'
 gem 'hashie'
 gem 'typhoeus'
 gem 'json'
+gem "jammit"
 
 group :development, :test do
 	gem "compass"
