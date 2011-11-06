@@ -26,12 +26,18 @@ class Person < ActiveRecord::Base
   def total_emissions
     flights.map(&:emission).compact.sum
   end
+  cache_method :total_emissions
   
   def total_timeframe
     (flights.last.date - flights.first.date) / 60 / 60 / 24 / 365
   end
+  cache_method :total_timeframe
   
   def average_people
     annualized_emissions / 1_283.85764
+  end
+  
+  def hash
+    full_name.hash
   end
 end

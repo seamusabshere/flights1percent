@@ -8,7 +8,8 @@ gem 'hashie'
 gem 'typhoeus'
 gem 'json'
 gem "jammit"
-
+gem 'cache_method'
+gem 'dalli'
 
 group :development, :test do
 	gem "compass"

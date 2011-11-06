@@ -85,6 +85,7 @@ GEM
       compass (>= 0.8.7)
     conversions (1.4.5)
       activesupport (>= 2.3.4)
+    dalli (1.1.3)
     ensure-encoding (0.1)
     errata (1.0.3)
       activesupport (>= 2.3.4)
@@ -208,8 +209,10 @@ PLATFORMS
 
 DEPENDENCIES
   brighter_planet_api (= 0.0.1)
+  cache_method
   compass
   compass-colors
+  dalli
   data_miner!
   escape
   guard-coffeescript
