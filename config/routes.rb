@@ -8,8 +8,9 @@ Flights1percent::Application.routes.draw do
 
   resources :aircraft
 
-
   resources :flights
+  
+  
   root :to => "pages#home"
 
 end

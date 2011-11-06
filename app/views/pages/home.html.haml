@@ -11,17 +11,17 @@
 				Big shots like Donald Trump, Bill Gates and movie stars like Angelina Jolie and Oprah Winfrey zip around the world in their fancy private jets. However, we’re all paying a price for their luxuries. These titans have gargantuan carbon footprints. Here’s how they compare to each other and to you, the average Joe or Jane.
 			=link_to "Show me", :class=>"show_me"	
 			
-	-@footprints.each_with_index do |footprint,i|
+	-@people.each_with_index do |person,i|
 		%div{:class=>"box color-#{i+2}"}
 			-#, :style=>"height: #{footprint[:percentage_in_set]}%;"}
 			.sidebar
-				=image_tag "/images/profile_pics/#{footprint[:name].downcase.gsub(/\s+/, '').capitalize}.jpg"
+				=image_tag "/images/profile_pics/#{person[:full_name].downcase.gsub(/\s+/, '')}.jpg"
 			.boxContent	
-				%h3.name=footprint[:name]
+				%h3.name=person.full_name
 				.datapoints
-					%h4="Total emissions per year: #{footprint[:emissions_per_year]} CO2"
+					%h4="Total emissions per year: #{person.annualized_emissions} CO2"
 					.peopleIndex
-						%h4=footprint[:people_equivalent]
+						%h4=person.average_people
 						Average People
 				
 					.bio=footprint[:bio]
