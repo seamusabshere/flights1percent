@@ -167,7 +167,7 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
       :destination_airport => destination_airport,
       :trips => 1,
       :segments_per_trip => 1,
-      :aircraft => aircraft.name,
+      :aircraft => aircraft.try(:name),
       :seats_estimate => 5,
       :load_factor => 1
     }
