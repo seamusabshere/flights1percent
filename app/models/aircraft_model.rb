@@ -8,7 +8,7 @@ class AircraftModel < ActiveRecord::Base
   
   data_miner do
     import("Importing aircraft from FAA",
-            :url => 'file:///Users/seamusabshere/code/flights1percent/AR102011.zip',
+            :url => 'http://registry.faa.gov/database/AR102011.zip', # october 2011
             :format => :fixed_width,
             :filename => 'ACFTREF.txt',
             :schema => [[ 'code', 7, { :type => :string }  ],

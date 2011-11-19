@@ -15,8 +15,7 @@ class Aircraft < ActiveRecord::Base
     end
     
     import("Importing aircraft from FAA",
-      # :url => 'http://registry.faa.gov/database/AR102011.zip', # make sure to update the date part of this filename
-      :url => 'file:///Users/seamusabshere/code/flights1percent/AR102011.zip',
+      :url => 'http://registry.faa.gov/database/AR102011.zip', # october 2011
       :format => :fixed_width,
       :filename => 'MASTER.txt',
       :schema => [[ 'tail_number', 5, { :type => :string }  ],
