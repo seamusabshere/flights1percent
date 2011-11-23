@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   
   
   def home
-      @people = ::Person.all
+      @people = Person.all
       @footprints = [
           {:name=>"Paul Allen", :percentage_in_set=> 20, :people_equivalent=> Person.find_by_full_name('Paul Allen').average_people, :emissions_per_year => Person.find_by_full_name('Paul Allen').annualized_emissions, :bio=>%Q{
             Paul Gardner Allen (born January 21, 1953) is an American business magnate, investor, and philanthropist. Allen co-founded Microsoft with Bill Gates. He is also the 57th richest along with Viktor Vekselberg and Gerald Cavendish Grosvenor (& family) who all rank the same with an estimated wealth of $13 billion as of 2011. He is the founder and chairman of Vulcan Inc., which manages his business and philanthropic efforts. Allen also has a multi-billion dollar investment portfolio and owns two professional sports teams.
