@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111119200443) do
+ActiveRecord::Schema.define(:version => 20111208044449) do
 
   create_table "aircraft", :id => false, :force => true do |t|
     t.string "tail_number",             :null => false
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20111119200443) do
 
   create_table "people", :id => false, :force => true do |t|
     t.string "full_name", :null => false
+    t.text   "blurb"
   end
 
 end

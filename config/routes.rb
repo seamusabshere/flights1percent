@@ -2,8 +2,9 @@ Flights1percent::Application.routes.draw do
 
   resources :aircraft_registrations
 
-  resources :people
-
+  get "people" => "people#edit"
+  post "people" => "people#update"
+  
   resources :aircraft_models
 
   resources :aircraft

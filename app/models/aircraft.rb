@@ -33,3 +33,12 @@ class Aircraft < ActiveRecord::Base
     [model.manufacturer_name, model.model_name].join(' ')
   end
 end
+
+# == Schema Information
+#
+# Table name: aircraft
+#
+#  tail_number             :string(255)     not null, primary key
+#  manufacturer_model_code :string(255)
+#
+

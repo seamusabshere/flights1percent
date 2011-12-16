@@ -6,3 +6,11 @@ class PersonTest < ActiveSupport::TestCase
     assert true
   end
 end
+
+# == Schema Information
+#
+# Table name: people
+#
+#  full_name :string(255)     not null, primary key
+#
+

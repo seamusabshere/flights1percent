@@ -1,5 +1,4 @@
 =javascript_include_tag "vendor/jquery", "vendor/underscore", "vendor/backbone", "application"
-
 :javascript
 	window.app = new Application;
 	$(function(){
@@ -10,3 +9,5 @@
 		po.src = 'https://apis.google.com/js/plusone.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 	})();
+
+=yield :js_last

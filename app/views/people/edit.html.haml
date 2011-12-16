@@ -1,0 +1,42 @@
+
+%h1 Please edit the blurb of the luminary
+
+-person =@people.first
+%form{:action=>'/people', :method=>"post", :name=>"person"}
+  %div
+    %p
+      %label{:style=>"font-weight:bold"} Luminaries
+      %select{:name=>"person[full_name]", :id=>"peopleNames"}
+        -@people.each do |person|
+          %option=person.full_name
+    .detail      
+      %h3{:style=>"font-weight:bold"} Detail
+      %p
+        %label{:style=>"font-weight:bold"} Full Name
+        %span{:id=>"personName"}=person.full_name
+      %p
+        %label{:style=>"font-weight:bold"} Blurb
+        %textarea{:style=>"width:400px;height:200px;padding:5px;", :name=>"person[blurb]", :id=>"personBlurb"}=person.blurb
+  %input{:type=>"submit", :"data-disable-with"=>"Please wait...", :value=>"Save"} 
+
+-content_for :js_last do
+  :javascript
+    $(function(){
+      var ret = {};
+      
+      var makeForm = function(o){
+        var fakeArray = $.makeArray(o);
+        
+        $.each(fakeArray, function(i, val){
+          ret[val["person"]["full_name"]] = val["person"]["blurb"];
+        });
+      };
+      makeForm(#{@people.to_json});
+      
+      $("#peopleNames").change(function(e){
+        var name = e.currentTarget.value;
+        $("#personName").text(name);
+        $("#personBlurb").text(ret[name]);
+      });
+      
+    });

@@ -1,30 +1,37 @@
 
 .banner
-	.dataPaneTitle TRAVEL FOOTPRINT
-	.logoText 1>99
+  .dataPaneTitle TRAVEL FOOTPRINT
+  .logoText 1>99
+  =link_to "", "javascript:;", :class=>"downArrow"
+.box.intro.color-1
+  .boxContent
+    .smallplane
+    %h1 Travel Footprint
+    %p
+      Big shots like Donald Trump, Bill Gates and movie stars like Angelina Jolie and Oprah Winfrey zip around the world in their fancy private jets. However, we’re all paying a price for their luxuries. These titans have gargantuan carbon footprints. Here’s how they compare to each other and to you, the average Joe or Jane.
+    =link_to "Show me", "javascript:;", :class=>"show_me" 
+
 .footPrintPanes
-	.box.intro.color-1
-		.boxContent
-			.smallplane
-			%h1 Travel Footprint
-			%p
-				Big shots like Donald Trump, Bill Gates and movie stars like Angelina Jolie and Oprah Winfrey zip around the world in their fancy private jets. However, we’re all paying a price for their luxuries. These titans have gargantuan carbon footprints. Here’s how they compare to each other and to you, the average Joe or Jane.
-			=link_to "Show me", :class=>"show_me"	
-			
-	-@footprints.each_with_index do |footprint,i|
-		%div{:class=>"box color-#{i+2}"}
-			-#, :style=>"height: #{footprint[:percentage_in_set]}%;"}
-			.sidebar
-				=image_tag "/images/profile_pics/#{footprint[:name].downcase.gsub(/\s+/, '')}.jpg"
-			.boxContent	
-				%h3.name=footprint[:name]
-				.datapoints
-					%h4="Total emissions per year: #{footprint[:emissions_per_year].round(1)} kg CO2"
-					.peopleIndex
-						%h4=footprint[:people_equivalent].round
-						Average People
-				
-					.bio=footprint[:bio]
-		
+  -@new_footprints.each_with_index do |footprint,i|
+    .box.offState{:class=>"color-#{i+2}", :style=>"height: #{footprint[:percentage_in_set]}%;"}
+    
+      %h1.name=footprint[:name]
+
+
+  -@new_footprints.each_with_index do |footprint,i|
+    %div{:class=>"box color-#{i+2}"}
+      -#, :style=>"height: #{footprint[:percentage_in_set]}%;"}
+      .sidebar{class: "#{footprint[:name].downcase.gsub(/[\s\W]+/,'')}"}
+      .boxContent 
+        %h3.name=footprint[:name]
+        .datapoints
+          %h4="Total emissions per year: #{footprint[:emissions_per_year].round(1)} kg CO2"
+          .peopleIndex
+            %h4=footprint[:people_equivalent].round
+            Average People
+        
+          .bio=footprint[:bio]
+    
+
 
 

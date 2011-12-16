@@ -313,7 +313,7 @@ caption {
   src: url("/fonts/SohoStd-Bold.otf");
 }
 
-/* line 27, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 29, ../../app/assets/stylesheets/partials/_app.scss */
 .banner {
   padding: 10px;
   overflow: hidden;
@@ -323,64 +323,100 @@ caption {
   font-weight: bold;
   font-size: 2em;
 }
-/* line 29, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 31, ../../app/assets/stylesheets/partials/_app.scss */
 .banner .dataPaneTitle {
   font-family: "SohoGothicRegular";
   float: left;
   margin-left: 20px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
-/* line 35, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 38, ../../app/assets/stylesheets/partials/_app.scss */
 .banner .logoText {
   font-family: "SohoGothicBold";
   float: right;
   margin-right: 20px;
 }
+/* line 50, ../../app/assets/stylesheets/partials/_app.scss */
+.banner .downArrow {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('../images/downarrow.png?1324003486');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -moz-box-shadow: #dddddd 1px 1px 10px;
+  -webkit-box-shadow: #dddddd 1px 1px 10px;
+  -o-box-shadow: #dddddd 1px 1px 10px;
+  box-shadow: #dddddd 1px 1px 10px;
+  display: block;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 58, ../../app/assets/stylesheets/partials/_app.scss */
+.banner .downArrow:hover {
+  -moz-box-shadow: white 1px 2px 10px;
+  -webkit-box-shadow: white 1px 2px 10px;
+  -o-box-shadow: white 1px 2px 10px;
+  box-shadow: white 1px 2px 10px;
+}
 
-/* line 55, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 70, ../../app/assets/stylesheets/partials/_app.scss */
 body .container {
   width: 100%;
 }
-/* line 58, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 73, ../../app/assets/stylesheets/partials/_app.scss */
 body .box {
-  padding: 0px 0 5px 0;
+  padding: 0px 0;
   margin: 0;
   border-bottom: solid 1px #ccc;
-  background: url('/images/flexBoxBg.png?1320525743') repeat-x;
-  cursor: pointer;
+  background: url('../images/flexBoxBg.png?1320525743') repeat-x;
   width: 100%;
   height: 600px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 67, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 81, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .name {
   font-family: "SohoRegular";
 }
-/* line 72, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 86, ../../app/assets/stylesheets/partials/_app.scss */
 body .box h1, body .box h2, body .box h3, body .box h4 {
   color: white;
 }
-/* line 73, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 87, ../../app/assets/stylesheets/partials/_app.scss */
+body .box.offState {
+  background: none;
+  cursor: pointer;
+}
+/* line 90, ../../app/assets/stylesheets/partials/_app.scss */
+body .box.offState h1 {
+  margin: 34.5px 0 34.5px 30px;
+}
+/* line 94, ../../app/assets/stylesheets/partials/_app.scss */
 body .box h3 {
   font-size: 2em;
   margin: 20px 0 10px 0;
   border-bottom: solid 3px white;
   padding-bottom: 10px;
 }
-/* line 81, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 102, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent {
   color: white;
   float: left;
   width: 800px;
   margin-left: 20px;
 }
-/* line 88, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 109, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .bio {
   font-family: "SohoRegular";
 }
-/* line 90, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 111, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .peopleIndex {
-  background: url('/images/plane_equal_icon.png?1320532733') no-repeat left top;
+  background: url('../images/plane_equal_icon.png?1320532733') no-repeat left top;
   padding-left: 220px;
   width: 100%;
   height: 211px;
@@ -388,191 +424,260 @@ body .box .boxContent .peopleIndex {
   font-family: SohoGothicRegular, sans;
   margin-bottom: 20px;
 }
-/* line 100, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 121, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .peopleIndex h4 {
   margin-bottom: 0;
   line-height: 1em;
   font-family: SohoGothicUltra, sans;
 }
-/* line 110, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 131, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .datapoints h4 {
   font-family: "SohoGothicRegular";
 }
-/* line 115, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 136, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar {
   float: left;
   height: 100%;
   width: 337px;
 }
-/* line 119, ../../app/assets/stylesheets/partials/_app.scss */
-body .box .sidebar image {
-  height: 100%;
-  width: 100%;
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.billgates {
+  background-image: url('../images/profile_pics/billgates.jpg?1320530688');
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.bobdylan {
+  background-image: url('../images/profile_pics/bobdylan.jpg?1320531742');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.jerrybruckheimer {
+  background-image: url('../images/profile_pics/jerrybruckheimer.jpg?1320531429');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.johntravolta {
+  background-image: url('../images/profile_pics/johntravolta.jpg?1320531156');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.kochbrothers {
+  background-image: url('../images/profile_pics/kochbrothers.jpg?1320528757');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.markcuban {
+  background-image: url('../images/profile_pics/markcuban.jpg?1320529753');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.michaelbloomberg {
+  background-image: url('../images/profile_pics/mikebloomberg.jpg?1320531346');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.morganfreeman {
+  background-image: url('../images/profile_pics/morganfreeman.jpg?1320531260');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.oprah {
+  background-image: url('../images/profile_pics/oprahwinfrey.jpg?1320531918');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.paulallen {
+  background-image: url('../images/profile_pics/paulallen.jpg?1320527906');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.philknightnike {
+  background-image: url('../images/profile_pics/philknight.jpg?1320529085');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.rupertmurdoch {
+  background-image: url('../images/profile_pics/rupertmurdoch.jpg?1320530634');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.rushlimbaugh {
+  background-image: url('../images/profile_pics/rushlimbaugh.jpg?1320531919');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.larrysergey {
+  background-image: url('../images/profile_pics/sergeyandlarry.jpg?1320527541');
+}
+/* line 145, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .sidebar.stevejobs {
+  background-image: url('../images/profile_pics/stevejobs.jpg?1320530722');
+}
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-1 {
   background-color: black;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-1:hover {
   background-color: #1a1a1a;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-2 {
   background-color: #6bb34d;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-2:hover {
   background-color: #89c271;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-3 {
   background-color: #595a5c;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-3:hover {
   background-color: #727376;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-4 {
   background-color: #bc2026;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-4:hover {
   background-color: #dc3339;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-5 {
   background-color: #3398d4;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-5:hover {
   background-color: #5daddd;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-6 {
   background-color: #96a89c;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-6:hover {
   background-color: #b2bfb6;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-7 {
   background-color: #eeb11e;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-7:hover {
   background-color: #f2c14d;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-8 {
   background-color: #ae8782;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-8:hover {
   background-color: #c2a5a1;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-9 {
   background-color: #604839;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-9:hover {
   background-color: #80604c;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-10 {
   background-color: #60b0af;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-10:hover {
   background-color: #82c1c0;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-11 {
   background-color: #6a141e;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-11:hover {
   background-color: #951c2a;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-12 {
   background-color: #9a857a;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-12:hover {
   background-color: #b0a097;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-13 {
   background-color: #b8d433;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-13:hover {
   background-color: #c7dd5d;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-14 {
   background-color: #8383a9;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-14:hover {
   background-color: #a1a1be;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-15 {
   background-color: #56a774;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-15:hover {
   background-color: #77b98f;
 }
-/* line 128, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-16 {
   background-color: #f68b67;
 }
-/* line 132, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-16:hover {
   background-color: #f9b097;
 }
-/* line 140, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 168, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro {
-  background-image: url('/images/jet.jpg?1320533710');
+  background-image: url('../images/jet.jpg?1320533710');
   background-position: center;
   background-repeat: no-repeat;
   color: white;
 }
-/* line 146, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 174, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent {
-  margin: 200px 20%;
+  width: 80%;
+  margin: 100px 5% 0 10%;
 }
-/* line 147, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 179, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent .smallplane {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/smallplaneicon.png?1320530869');
+  background-image: url('../images/smallplaneicon.png?1320530869');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 70px;
   height: 24px;
   margin-bottom: 10px;
 }
-/* line 151, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 183, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent h1 {
   font-family: "SohoGothicBold";
+  font-size: 10em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
-/* line 154, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent p {
   font-family: "SohoRegular";
+  font-size: 2em;
 }
-/* line 157, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent .show_me {
   font-family: "SohoBold";
+  text-decoration: none;
+  color: black;
+  background: white;
+  padding: 10px 20px;
+  font-size: 2em;
 }
-/* line 170, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 210, ../../app/assets/stylesheets/partials/_app.scss */
+body .content {
+  position: relative;
+}
+/* line 216, ../../app/assets/stylesheets/partials/_app.scss */
 body .container, body .content, body .footprintPanes {
   width: 100%;
   height: 1000px;

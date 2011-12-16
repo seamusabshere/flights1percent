@@ -6,3 +6,12 @@ class AircraftTest < ActiveSupport::TestCase
     assert true
   end
 end
+
+# == Schema Information
+#
+# Table name: aircraft
+#
+#  tail_number             :string(255)     not null, primary key
+#  manufacturer_model_code :string(255)
+#
+

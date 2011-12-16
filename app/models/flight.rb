@@ -174,3 +174,15 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
   end
 end
 
+
+# == Schema Information
+#
+# Table name: flights
+#
+#  row_hash            :string(255)     not null, primary key
+#  raw_wsj_data        :text
+#  raw_emission_data   :text
+#  tail_number         :string(255)
+#  carbon_object_value :float
+#
+

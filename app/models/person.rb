@@ -3,6 +3,7 @@ class Person < ActiveRecord::Base
   set_primary_key :full_name
 
   col :full_name
+  col :blurb
 
   data_miner do
     import "the list", :url => 'https://docs.google.com/spreadsheet/pub?key=0AtyCBJLCFHlwdDAwSUY0OU01dWYwY0VGX0tiUjl5Q0E&single=true&gid=1&output=csv' do
@@ -41,3 +42,11 @@ class Person < ActiveRecord::Base
     full_name.hash
   end
 end
+
+# == Schema Information
+#
+# Table name: people
+#
+#  full_name :string(255)     not null, primary key
+#
+
