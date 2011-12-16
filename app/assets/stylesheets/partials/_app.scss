@@ -28,6 +28,9 @@
 
 .banner{
 	padding: 10px;
+	position: fixed;
+	width: 100%;
+  z-index: 100;
 	.dataPaneTitle{
 		font-family: "SohoGothicRegular";
 		float:left;
@@ -55,11 +58,47 @@
     @include box-shadow(#ddd 1px 1px 10px);
     display: block;
 		@include opacity(0);
+		cursor: pointer;
     &:hover{
       @include box-shadow(white 1px 2px 10px);
     }
   }
 }
+
+.hide{
+  display: none;
+}
+
+.overlay{
+  position: absolute;
+  top: 60px;
+  height:800px;
+  width: 100%;
+
+  .bg{
+    background: black;
+    height:100%;
+    width: 100%;
+    opacity:.4;
+    z-index: 1;
+    position: absolute;
+  }
+  .box{
+    z-index: 2;
+    position: relative;
+    width: 1180px;
+  }
+  .innerWrapper{
+    margin: 0 auto;
+    width: 1180px;
+  }
+  .front{
+    position:absolute;
+  }
+  
+}
+
+
 
 
 //MIXINS

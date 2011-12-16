@@ -1,5 +1,6 @@
 class Application
-  constructor: ->
+  constructor: ->  
+    
   start: ->
     console.log 'App started'  
     
@@ -27,7 +28,7 @@ class Application
       width:"100%" 
     )    
     originalFootPrintsHeight = $(".footPrintPanes").offset().top
-    console.log originalFootPrintsHeight
+    # COMPONENT # 1
     # Flip to on state
     $(".show_me").click ->
       # Move foot print panes to the top below the banner
@@ -37,10 +38,7 @@ class Application
         }, 400
       )
       # Fade in the banner text
-      $(".dataPaneTitle").css({cursor: "pointer"}).animate(
-        {opacity:.6},
-        400, "linear"
-      )
+      $(".dataPaneTitle").css({cursor: "pointer"}).animate {opacity:.6},400, "linear"
       
       # Fade in the down arrow button
       $(".downArrow").animate({opacity:1}, 600, "linear")
@@ -56,9 +54,55 @@ class Application
           top: originalFootPrintsHeight, 
         }, 400
       )
-      # Fade in the banner text
+      # Fade out the banner text and downArrow
       $(".dataPaneTitle, .downArrow").css({cursor: "auto"}).animate({opacity:0},400, "linear")
       $(".footPrintPanes").removeClass("enabled")
+      # Hide the overlay
+      $(".overlay").addClass("hide")
     )
+    
+    
+    # COMPONENT # 2
+    compiled = _.template($("#overlayBoxTmpl").html())
+    $(".box.offState").click ->
+      # Open overlay
+      $(".overlay").removeClass("hide")
+      # Initialize data
+      data = JSON.parse($("#data").html())
+      index = $(this).data("index")
+      personObj = data[index]
+      className = personObj["name"].toLowerCase().replace(/[\s\W]+/g,'')
+      addition = 
+        class_name: className
+        color_index: index + 2   
+      
+      # Position rendered template in overlay
+      offsetAmount = => $(".banner").offset()
+      front = => $(".overlay").find(".front")
+      front().html(compiled(_.extend({}, personObj , addition))).css(
+        top: "#{offsetAmount().top}px"        
+      )
+      # Ensure the rendered box remains stationary
+      $(window).scroll(->
+        console.log offsetAmount()
+        front().css(
+          top: "#{offsetAmount().top}px"
+        )
+      )
+      
+      # Adjust the height of the overlay background
+      $(".overlay").find(".bg").height($(".container").height())
+      
+      # TODO: Move the overlay with the scroller
+      
+      # Fade in the banner text
+      $(".dataPaneTitle").css({cursor: "pointer"}).animate {opacity:.6},400, "linear"
+      
+    $(".overlay .bg").click ->
+      # Close overlay
+      $(".overlay").addClass("hide")
+      
+      # Fade out the banner text and downArrow
+      $(".dataPaneTitle").css({cursor: "auto"}).animate {opacity:0},400, "linear"
     
 @Application = Application

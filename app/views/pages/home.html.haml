@@ -13,25 +13,36 @@
 
 .footPrintPanes
   -@new_footprints.each_with_index do |footprint,i|
-    .box.offState{:class=>"color-#{i+2}", :style=>"height: #{footprint[:percentage_in_set]}%;"}
+    .box.offState{:class=>"color-#{i+2}", :style=>"height: #{footprint[:percentage_in_set]}%;", :"data-index"=>"#{i}"}
     
       %h1.name=footprint[:name]
 
-
-  -@new_footprints.each_with_index do |footprint,i|
-    %div{:class=>"box color-#{i+2}"}
-      -#, :style=>"height: #{footprint[:percentage_in_set]}%;"}
-      .sidebar{class: "#{footprint[:name].downcase.gsub(/[\s\W]+/,'')}"}
-      .boxContent 
-        %h3.name=footprint[:name]
-        .datapoints
-          %h4="Total emissions per year: #{footprint[:emissions_per_year].round(1)} kg CO2"
-          .peopleIndex
-            %h4=footprint[:people_equivalent].round
-            Average People
-        
-          .bio=footprint[:bio]
+.overlay.hide  
+  .bg  
+  .innerWrapper
+    .front
+   
     
+.hide
+  :plain
+    <script type="text/jquery-tmpl" id="overlayBoxTmpl">
+      <div class="box color-<%=color_index%>">
+        <div class="<%=class_name%> sidebar"></div>
+        <div class="boxContent">
+          <h3 class="name"><%=name%></h3>
+          <div class="datapoints">
+            <h4>Total emissions per year: <%=emissions_per_year%> kg CO2</h4>
+            <div class="peopleIndex">
+              <h4><%=people_equivalent%></h4>
+              Average People
+            </div>
+            <div class="bio"><%=bio%></div>
+          </div>
+        </div>
+      </div>
+    </script>  
+    
+  #data
+    =@new_footprints.to_json  
 
-
-
+    
