@@ -1,0 +1,2 @@
+class DomicilesController < ApplicationController
+end

@@ -1,5 +1,7 @@
 Flights1percent::Application.routes.draw do
 
+  resources :domiciles
+
   resources :aircraft_registrations
 
   get "people" => "people#edit"

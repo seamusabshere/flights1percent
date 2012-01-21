@@ -1,0 +1,2 @@
+module DomicilesHelper
+end
