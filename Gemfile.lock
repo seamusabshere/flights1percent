@@ -25,8 +25,9 @@ GIT
     mini_record-compat (0.3.0)
       activerecord (>= 3)
 
-PATH
-  remote: /Users/seamusabshere/code/rubillow
+GIT
+  remote: https://github.com/seamusabshere/rubillow.git
+  revision: 1e19e7376511cd0cd263c260f2391e50e185562b
   specs:
     rubillow (0.0.3)
       nokogiri (~> 1.5.0)
