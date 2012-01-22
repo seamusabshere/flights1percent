@@ -59,4 +59,8 @@ class FancyHouse < ActiveRecord::Base
     parts << "$#{price}" if price.present?
     parts.join(' and ')
   end
+  
+  def hash
+    name.hash
+  end
 end

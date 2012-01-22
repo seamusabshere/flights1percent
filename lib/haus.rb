@@ -23,6 +23,7 @@ module Haus
   def average_houses
     [ floorspace_outsizedness, bedroom_outsizedness ].compact.max
   end
+  cache_method :average_houses
 end
 
 =begin
