@@ -460,7 +460,11 @@ body .box .boxContent {
 body .box .boxContent .bio {
   font-family: "SohoRegular";
 }
-/* line 155, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 154, ../../app/assets/stylesheets/partials/_app.scss */
+body .box .boxContent .bio.housing {
+  font-size: 24px;
+}
+/* line 156, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .peopleIndex {
   background: url('../images/plane_equal_icon.png?1327243451') no-repeat left top;
   padding-left: 220px;
@@ -470,287 +474,287 @@ body .box .boxContent .peopleIndex {
   font-family: SohoGothicRegular, sans;
   margin-bottom: 20px;
 }
-/* line 165, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 166, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .peopleIndex h4 {
   margin-bottom: 0;
   line-height: 1em;
   font-family: SohoGothicUltra, sans;
 }
-/* line 174, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 175, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .peopleIndex.housing {
   background: url('../images/house_icon.png?1327263022') no-repeat left top;
 }
-/* line 179, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 180, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .datapoints h4 {
   font-family: "SohoGothicRegular";
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 185, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar {
   float: left;
   height: 100%;
   width: 337px;
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.billgates {
   background-image: url('../images/profile_pics/billgates.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.bobdylan {
   background-image: url('../images/profile_pics/bobdylan.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.jerrybruckheimer {
   background-image: url('../images/profile_pics/jerrybruckheimer.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.johntravolta {
   background-image: url('../images/profile_pics/johntravolta.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.kochbrothers {
   background-image: url('../images/profile_pics/kochbrothers.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.markcuban {
   background-image: url('../images/profile_pics/markcuban.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.michaelbloomberg {
   background-image: url('../images/profile_pics/mikebloomberg.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.morganfreeman {
   background-image: url('../images/profile_pics/morganfreeman.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.oprah {
   background-image: url('../images/profile_pics/oprahwinfrey.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.paulallen {
   background-image: url('../images/profile_pics/paulallen.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.philknightnike {
   background-image: url('../images/profile_pics/philknight.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.rupertmurdoch {
   background-image: url('../images/profile_pics/rupertmurdoch.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.rushlimbaugh {
   background-image: url('../images/profile_pics/rushlimbaugh.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.larrysergey {
   background-image: url('../images/profile_pics/sergeyandlarry.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.stevejobs {
   background-image: url('../images/profile_pics/stevejobs.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.alecbaldwin {
   background-image: url('../images/profile_pics/alecbaldwin.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.billgates {
   background-image: url('../images/profile_pics/billgates.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.derekjeter {
   background-image: url('../images/profile_pics/derekjeter.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.donaldtrump {
   background-image: url('../images/profile_pics/donaldtrump.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.ekaterinarybolovleva {
   background-image: url('../images/profile_pics/ekaterinarybolovleva.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.emerillagasse {
   background-image: url('../images/profile_pics/emerillagasse.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.glennbeck {
   background-image: url('../images/profile_pics/glennbeck.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.joanrivers {
   background-image: url('../images/profile_pics/joanrivers.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.lebronjames {
   background-image: url('../images/profile_pics/lebronjames.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.lilwayne {
   background-image: url('../images/profile_pics/lilwayne.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.markwahlberg {
   background-image: url('../images/profile_pics/markwahlberg.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.markzuckerberg {
   background-image: url('../images/profile_pics/markzuckerberg.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.mikebloomberg {
   background-image: url('../images/profile_pics/mikebloomberg.jpg?1327243451');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.newtgingrich {
   background-image: url('../images/profile_pics/newtgingrich.jpg?1327261945');
 }
-/* line 193, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.petraecclestone {
   background-image: url('../images/profile_pics/petraecclestone.jpg?1327261945');
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-1 {
   background-color: black;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-1:hover {
   background-color: #1a1a1a;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-2 {
   background-color: #6bb34d;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-2:hover {
   background-color: #89c271;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-3 {
   background-color: #595a5c;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-3:hover {
   background-color: #727376;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-4 {
   background-color: #bc2026;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-4:hover {
   background-color: #dc3339;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-5 {
   background-color: #3398d4;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-5:hover {
   background-color: #5daddd;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-6 {
   background-color: #96a89c;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-6:hover {
   background-color: #b2bfb6;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-7 {
   background-color: #eeb11e;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-7:hover {
   background-color: #f2c14d;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-8 {
   background-color: #ae8782;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-8:hover {
   background-color: #c2a5a1;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-9 {
   background-color: #604839;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-9:hover {
   background-color: #80604c;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-10 {
   background-color: #60b0af;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-10:hover {
   background-color: #82c1c0;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-11 {
   background-color: #6a141e;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-11:hover {
   background-color: #951c2a;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-12 {
   background-color: #9a857a;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-12:hover {
   background-color: #b0a097;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-13 {
   background-color: #b8d433;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-13:hover {
   background-color: #c7dd5d;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-14 {
   background-color: #8383a9;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-14:hover {
   background-color: #a1a1be;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-15 {
   background-color: #56a774;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-15:hover {
   background-color: #77b98f;
 }
-/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 205, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-16 {
   background-color: #f68b67;
 }
-/* line 208, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 209, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-16:hover {
   background-color: #f9b097;
 }
-/* line 216, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 217, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro {
   background-image: url('../images/jet.jpg?1327243451');
   background-position: center;
   background-repeat: no-repeat;
   color: white;
 }
-/* line 222, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 223, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent {
   width: 80%;
   margin: 100px 5% 0 10%;
 }
-/* line 227, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 228, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent .smallplane {
   text-indent: -119988px;
   overflow: hidden;
@@ -762,7 +766,7 @@ body .box.intro .boxContent .smallplane {
   height: 24px;
   margin-bottom: 10px;
 }
-/* line 231, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 232, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent .smallhouse {
   text-indent: -119988px;
   overflow: hidden;
@@ -774,19 +778,19 @@ body .box.intro .boxContent .smallhouse {
   height: 57px;
   margin-bottom: 10px;
 }
-/* line 235, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 236, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent h1 {
   font-family: "SohoGothicBold";
   font-size: 10em;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
-/* line 241, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 242, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent p {
   font-family: "SohoRegular";
   font-size: 2em;
 }
-/* line 245, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 246, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent .show_me {
   font-family: "SohoBold";
   text-decoration: none;
@@ -795,17 +799,17 @@ body .box.intro .boxContent .show_me {
   padding: 10px 20px;
   font-size: 2em;
 }
-/* line 262, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 263, ../../app/assets/stylesheets/partials/_app.scss */
 body .content {
   position: relative;
 }
-/* line 268, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 269, ../../app/assets/stylesheets/partials/_app.scss */
 body .container, body .content, body .footprintPanes {
   width: 100%;
   height: 1000px;
 }
 
-/* line 275, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 276, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro.housing {
   background-image: url(/images/house.jpg);
 }
