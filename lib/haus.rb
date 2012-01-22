@@ -20,7 +20,7 @@ module Haus
     end
   end
   
-  def outsizedness
+  def average_houses
     [ floorspace_outsizedness, bedroom_outsizedness ].compact.max
   end
 end

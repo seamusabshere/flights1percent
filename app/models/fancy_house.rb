@@ -51,10 +51,6 @@ class FancyHouse < ActiveRecord::Base
     end
   end
 
-  def average_houses
-    5.5 #FIXME
-  end
-
   def blurb
     'Lorem ipsum' #FIXME
   end
