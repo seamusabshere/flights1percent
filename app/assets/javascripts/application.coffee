@@ -91,7 +91,7 @@ class Application
       #   front().css(
       #     top: "#{offsetAmount().top}px"
       #   )
-      )
+      # )
       
       # Adjust the height of the overlay background
       $(".overlay").find(".bg").height($(".container").height())
