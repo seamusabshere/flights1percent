@@ -70,7 +70,9 @@ class Domicile < ActiveRecord::Base
   end
   
   def floorspace_estimate
-    gross_square_feet * 0.09290304 # sq metres
+    if gross_square_feet.present?
+      gross_square_feet * 0.09290304 # sq metres
+    end
   end
     
   def residence_class

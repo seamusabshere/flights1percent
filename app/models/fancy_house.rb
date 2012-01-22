@@ -39,7 +39,9 @@ class FancyHouse < ActiveRecord::Base
   end
   
   def floorspace_estimate
-    square_feet * 0.09290304 # sq metres
+    if square_feet.present?
+      square_feet * 0.09290304 # sq metres
+    end
   end
   
   def residence_class
@@ -52,6 +54,9 @@ class FancyHouse < ActiveRecord::Base
   end
 
   def blurb
-    'Lorem ipsum' #FIXME
+    parts = []
+    parts << "#{square_feet} square feet" if square_feet.present?
+    parts << "$#{price}" if price.present?
+    parts.join(' and ')
   end
 end
