@@ -228,6 +228,10 @@
 					@include replace-text-with-dimensions("smallplaneicon.png");
     			margin-bottom: 10px;
 				}
+				.smallhouse{
+					@include replace-text-with-dimensions("smallhouseicon.png");
+    			margin-bottom: 10px;
+				}
 				h1{
 					font-family: "SohoGothicBold";
 					font-size: 10em;
