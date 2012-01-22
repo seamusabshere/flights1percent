@@ -1,3 +1,10 @@
+.nav h1 a {
+  text-decoration: none;
+  width: 105px;
+  height: 27px;
+  display: block;
+}
+
 #what {
   width: 300px;
 }
@@ -69,4 +76,8 @@
 
 #what h4 {
   font-size: 21px;
+}
+
+#who>.divider {
+  margin-left: 14px;
 }
