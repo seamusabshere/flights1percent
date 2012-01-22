@@ -65,29 +65,31 @@ class Application
     # COMPONENT # 2
     compiled = _.template($("#overlayBoxTmpl").html())
     $(".box.offState").click ->
+      $(this).children('.details').show()
+    
       # Open overlay
-      $(".overlay").removeClass("hide")
+      # $(".overlay").removeClass("hide")
       # Initialize data
-      data = JSON.parse($("#data").html())
-      index = $(this).data("index")
-      personObj = data[index]
-      className = personObj["name"].toLowerCase().replace(/[\s\W]+/g,'')
-      addition = 
-        class_name: className
-        color_index: index + 2   
+      # data = JSON.parse($("#data").html())
+      # index = $(this).data("index")
+      # personObj = data[index]
+      # className = personObj["name"].toLowerCase().replace(/[\s\W]+/g,'')
+      # addition = 
+      #   class_name: className
+      #   color_index: index + 2   
       
       # Position rendered template in overlay
-      offsetAmount = => $(".banner").offset()
-      front = => $(".overlay").find(".front")
-      front().html(compiled(_.extend({}, personObj , addition))).css(
-        top: "#{offsetAmount().top}px"        
-      )
+      # offsetAmount = => $(".banner").offset()
+      # front = => $(".overlay").find(".front")
+      # front().html(compiled(_.extend({}, personObj , addition))).css(
+      #   top: "#{offsetAmount().top}px"        
+      # )
       # Ensure the rendered box remains stationary
-      $(window).scroll(->
-        console.log offsetAmount()
-        front().css(
-          top: "#{offsetAmount().top}px"
-        )
+      # $(window).scroll(->
+      #   console.log offsetAmount()
+      #   front().css(
+      #     top: "#{offsetAmount().top}px"
+      #   )
       )
       
       # Adjust the height of the overlay background

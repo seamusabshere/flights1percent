@@ -17,6 +17,17 @@
     .box.offState{:class=>"color-#{i+2}", :style=>"height: #{footprint[:percentage_in_set]}%;", :"data-index"=>"#{i}"}
     
       %h1.name=footprint[:name]
+      
+      .details{:style=>"display: none;"}
+        .sidebar
+        %h3.name=footprint[:name]
+        .datapoints
+          .peopleIndex
+            %h4=footprint[:people_equivalent]
+            Average People
+          .bio
+            =footprint[:bio]
+          
 
 .overlay.hide  
   .bg  
