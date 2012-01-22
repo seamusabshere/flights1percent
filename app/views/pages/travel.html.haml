@@ -19,7 +19,7 @@
       %h1.name=footprint[:name]
       
       .details{:style=>"display: none;"}
-        .sidebar
+        .sidebar{:class=>footprint[:name].downcase.gsub(/[^a-z]/,'')}
         %h3.name=footprint[:name]
         .datapoints
           .peopleIndex
