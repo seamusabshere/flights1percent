@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def home
+  def travel
       @people = Person.all
       @new_footprints = []
       @people.each do |person|
