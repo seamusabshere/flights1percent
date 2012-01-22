@@ -1,14 +1,27 @@
 class Flight < ActiveRecord::Base
+  class << self
+    def cacheme
+      all.each do |flight|
+        flight.cacheme!
+      end
+      nil
+    end
+  end
 
   set_primary_key :row_hash
-
+  
   col :row_hash
   col :raw_wsj_data, :type => :text
   col :raw_emission_data, :type => :text
   col :tail_number
   col :carbon_object_value, :type => :float
+  col :arrival_date, :type => :datetime
+  col :person_id
+  
+  default_scope :order => :arrival_date
   
   belongs_to :aircraft, :foreign_key => 'tail_number'
+  belongs_to :person
 
 TAILS = %w(
 N846QM N813QS
@@ -155,7 +168,14 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
   end
   
   def date
-    Time.parse wsj_data.ARRDATE
+    arrival_date
+  end
+  
+  def cacheme!
+    return if arrival_date.present?
+    self.arrival_date = Time.parse(wsj_data.ARRDATE)
+    self.person = aircraft.try(:registrations).try(:first).try(:person)
+    save!
   end
   
   private

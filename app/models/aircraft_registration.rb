@@ -8,6 +8,7 @@ class AircraftRegistration < ActiveRecord::Base
   # add_index [:tail_number, :full_name], :unique => true
   
   belongs_to :aircraft, :foreign_key => 'tail_number'
+  belongs_to :person, :foreign_key => 'full_name'
   
   class Parser
     def apply(row)

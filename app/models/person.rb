@@ -13,13 +13,8 @@ class Person < ActiveRecord::Base
   
   has_many :aircraft_registrations, :foreign_key => 'full_name'
   has_many :aircraft, :through => :aircraft_registrations
+  has_many :flights
   
-  def flights
-    @flights ||= aircraft.map(&:flights).flatten.sort do |a, b|
-      a.date <=> b.date
-    end
-  end
-
   def annualized_emissions
     total_emissions / total_timeframe
   end

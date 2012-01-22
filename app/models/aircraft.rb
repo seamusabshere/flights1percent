@@ -5,7 +5,8 @@ class Aircraft < ActiveRecord::Base
   col :manufacturer_model_code
   # col :manufacturer_name
   # col :model_name
-  
+
+  has_many :registrations, :class_name => 'AircraftRegistration', :foreign_key => 'tail_number'
   belongs_to :model, :class_name => 'AircraftModel', :foreign_key => 'manufacturer_model_code'
   has_many :flights, :foreign_key => 'tail_number'
   
