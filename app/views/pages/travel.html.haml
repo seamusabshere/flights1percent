@@ -1,0 +1,48 @@
+
+.banner
+  .dataPaneTitle TRAVEL FOOTPRINT
+  .logoText 1>99
+  =link_to "", "javascript:;", :class=>"downArrow"
+.box.intro.color-1
+  .boxContent
+    .smallplane
+    %h1 Travel Footprint
+    %p
+      Big shots like Donald Trump, Bill Gates and movie stars like Angelina Jolie and Oprah Winfrey zip around the world in their fancy private jets. However, we’re all paying a price for their luxuries. These titans have gargantuan carbon footprints. Here’s how they compare to each other and to you, the average Joe or Jane.
+    =link_to "Show me", "javascript:;", :class=>"show_me" 
+
+.footPrintPanes
+  -@new_footprints.each_with_index do |footprint,i|
+    .box.offState{:class=>"color-#{i+2}", :style=>"height: #{footprint[:percentage_in_set]}%;", :"data-index"=>"#{i}"}
+    
+      %h1.name=footprint[:name]
+
+.overlay.hide  
+  .bg  
+  .innerWrapper
+    .front
+   
+    
+.hide
+  :plain
+    <script type="text/jquery-tmpl" id="overlayBoxTmpl">
+      <div class="box color-<%=color_index%>">
+        <div class="<%=class_name%> sidebar"></div>
+        <div class="boxContent">
+          <h3 class="name"><%=name%></h3>
+          <div class="datapoints">
+            <h4>Total emissions per year: <%=emissions_per_year%> kg CO2</h4>
+            <div class="peopleIndex">
+              <h4><%=people_equivalent%></h4>
+              Average People
+            </div>
+            <div class="bio"><%=bio%></div>
+          </div>
+        </div>
+      </div>
+    </script>  
+    
+  #data
+    =@new_footprints.to_json  
+
+    
