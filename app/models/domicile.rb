@@ -8,7 +8,7 @@ class Domicile < ActiveRecord::Base
     end
   end
   
-  include Haus
+  include Haus # provides average_houses and will provide emission estimate eventually
 
   BUILDING_CLASSES = [
     /home/i,

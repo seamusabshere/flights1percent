@@ -1,5 +1,5 @@
 class FancyHouse < ActiveRecord::Base
-  include Haus
+  include Haus # provides average_houses and will provide emission estimate eventually
   
   set_primary_key :name
   
