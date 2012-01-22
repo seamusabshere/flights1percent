@@ -66,6 +66,7 @@ class Application
     compiled = _.template($("#overlayBoxTmpl").html())
     $(".box.offState").click ->
       $(this).children('.details').show()
+      $(this).children('h1').hide()
     
       # Open overlay
       # $(".overlay").removeClass("hide")
