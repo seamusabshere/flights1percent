@@ -14,9 +14,10 @@ Flights1percent::Application.routes.draw do
   resources :aircraft
 
   resources :flights
+
+  match '/:id(.:format)' => 'pages#show', :as => :page
   
-  
-  root :to => "pages#travel"
+  root :to => "pages#index", :via => :get
 
 end
 

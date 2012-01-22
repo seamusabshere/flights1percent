@@ -1,0 +1,55 @@
+<%= content_for :head do %>
+<%= stylesheet_link_tag 'home' %>
+<% end %>
+
+<div class="nav">
+  <ul class="links">
+    <li><%= link_to 'add your own', '#' %></li>
+    <li><%= link_to 'about 1v99.org', '/about' %></li>
+  </ul>
+  <h1>1v99</h1>
+  <h2><span>V</span>isualize the gap.</h2>
+</div>
+
+<p class="intro">See the difference between the wealthiest 1% and you.</p>
+
+<ul class="topics">
+  <li class="environment">
+    <h3>Environment</h3>
+    <ul>
+      <li class="housing">
+        <%= link_to '/housing' do %>
+          <strong>Residential energy use</strong>
+          See how the energy guzzling mansions &amp; penthouses of the 1% compare to each other, and to your own humble hovel.
+        <% end %>
+      </li>
+      <li class="travel">
+        <%= link_to '/travel' do %>
+          <strong>Travel footprint</strong>
+          See how wealthy jetsetters compare to each other and to you, the average economy class victim.
+        <% end %>
+      </li>
+    </ul>
+    <p class="more"><%= link_to 'view more', '#' %></p>
+  </li>
+  <li class="politics todo">
+    <h3>Politics</h3>
+    <ul>
+      <li>
+      </li>
+      <li>
+      </li>
+    </ul>
+    <p class="more"><%= link_to 'view more', '#' %></p>
+  </li>
+  <li class="taxation todo">
+    <h3>Taxation</h3>
+    <ul>
+      <li>
+      </li>
+      <li>
+      </li>
+    </ul>
+    <p class="more"><%= link_to 'view more', '#' %></p>
+  </li>
+</ul>

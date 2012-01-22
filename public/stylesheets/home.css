@@ -1,0 +1,154 @@
+body .container {
+  width: 946px;
+  margin: 30px auto;
+}
+
+.intro {
+  font-family: SohoRegular;
+  font-size: 63px;
+}
+
+.nav {
+  overflow: auto;
+  padding: 0 0 10px;
+  font-family: SohoRegular;
+}
+
+.nav h1 {
+  text-indent: -9999px;
+  width: 105px;
+  height: 27px;
+  background: url(/images/logo.png);
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.nav h2 {
+  font-size: 18px;
+  float: left;
+  margin: 5px 0 0;
+}
+
+.nav h2 span {
+  color: #e64036;
+}
+
+.nav .links {
+  float: right;
+  list-style: none;
+  font-size: 18px;
+  margin: 5px 0 0
+}
+
+.nav .links li {
+  float: left;
+  width: 160px;
+}
+
+.nav .links li:before {
+  content: ">";
+  color: #e64036;
+  padding: 0 4px 0 0;
+}
+
+.nav .links li a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav .links li a:hover {
+  color: #0066CC;
+  text-decoration: underline;
+}
+
+.topics {
+  font-family: SohoRegular;
+  list-style: none;
+  overflow: auto;
+  padding: 0;
+}
+
+.topics li {
+  width: 300px;
+  float: left;
+  margin: 0 14px 0 0;
+}
+
+.topics li:last-child {
+  margin-right: 0;
+}
+
+.topics li h3 {
+  font-size: 20px;
+  padding: 7px;
+}
+
+.topics li.environment h3 {
+  background: url(/images/stripes-blue.png);
+}
+
+.topics li.politics h3 {
+  background: url(/images/stripes-green.png);
+}
+
+.topics li.taxation h3 {
+  background: url(/images/stripes-red.png);
+}
+
+.topics li ul {
+  list-style: none;
+  padding: 0;
+}
+
+.topics li ul li {
+  margin: 0 0 10px;
+  background: url(/images/stripes-gray.png);
+}
+
+.topics li ul li.housing {
+  background: url(/images/housing.jpg);
+}
+
+.topics li ul li.travel {
+  background: url(/images/travel.jpg);
+}
+
+.topics li.todo ul li {
+  height: 171px;
+}
+
+.topics li ul li a {
+  height: 121px;
+  display: block;
+  padding: 40px 10px 10px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.topics li ul li a strong {
+  font-weight: normal;
+  font-family: SohoGothicBold;
+  text-transform: uppercase;
+  display: block;
+  font-size: 18px;
+}
+
+.topics li ul li a:hover strong {
+  text-decoration: underline;
+}
+
+.topics li .more {
+  font-size: 16px;
+}
+
+.topics li .more:before {
+  content: ">";
+  color: #e64036;
+  padding: 0 4px 0 0;
+}
+
+.topics li .more a {
+  color: black;
+  text-decoration: none;
+}
