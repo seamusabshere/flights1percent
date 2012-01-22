@@ -1,0 +1,72 @@
+#what {
+  width: 300px;
+}
+
+.content {
+  font-family: SohoRegular;
+}
+
+.content h3 {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+ 
+#what, #who {
+  margin-top: 50px;
+  float: left;
+}
+
+.divider {
+  height: 40px;
+  background: url(/images/stripes-red.png);
+  margin: 0 0 20px;
+}
+
+#who {
+  width: 614px;
+}
+
+.content p {
+  font-family: SohoGothicRegular;
+  font-size: 14px;
+  color: #525252;
+}
+
+#who ul {
+  list-style: none;
+  padding: 0;
+  overflow: auto;
+}
+
+#who ul li {
+  float: left;
+  width: 280px;
+  margin: 0 0 0 14px;
+  height: 400px;
+}
+
+#who ul li h4 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: normal;
+}
+
+#who ul li h5 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: normal;
+}
+
+#who ul .divider {
+  height: 15px;
+  background: url(/images/stripes-gray.png);
+}
+
+#what ul {
+  list-style: none;
+  padding: 0;
+}
+
+#what h4 {
+  font-size: 21px;
+}

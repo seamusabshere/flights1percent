@@ -1,5 +1,6 @@
 <%= content_for :head do %>
 <%= stylesheet_link_tag 'home' %>
+<%= stylesheet_link_tag 'nav' %>
 <% end %>
 
 <div class="nav">
@@ -20,13 +21,18 @@
       <li class="housing">
         <%= link_to '/housing' do %>
           <strong>Residential energy use</strong>
-          See how the energy guzzling mansions &amp; penthouses of the 1% compare to each other, and to your own humble hovel.
+          See how the energy guzzling 
+mansions &amp; penthouses of the 1% 
+compare to each other, and to your 
+own humble hovel.
         <% end %>
       </li>
       <li class="travel">
         <%= link_to '/travel' do %>
           <strong>Travel footprint</strong>
-          See how wealthy jetsetters compare to each other and to you, the average economy class victim.
+          See how wealthy jetsetters compare 
+to each other and to you, the average 
+economy class victim.
         <% end %>
       </li>
     </ul>

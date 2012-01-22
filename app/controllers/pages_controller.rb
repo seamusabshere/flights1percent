@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   
   def show
     @title = current_title unless params[:id] == 'index'
-    send params[:id].to_sym if %w(travel).include? params[:id]
+    send params[:id].to_sym if %w(travel housing).include? params[:id]
     render :template => current_page
   rescue ActionView::MissingTemplate
     render :nothing => true, :status => :not_found
@@ -26,6 +26,19 @@ class PagesController < ApplicationController
         emissions_per_year: person.annualized_emissions.round,
         bio: person.blurb,
         percentage_in_set: "10"
+      })
+    end
+  end
+
+  def housing
+    @fancy_houses = FancyHouse.all
+    @new_footprints = []
+    @fancy_houses.each do |house|
+      @new_footprints.push({
+        name: house.name,
+        percentage_in_set: "10", #wtf??
+        people_equivalent: house.average_houses.round,
+        bio: house.blurb,
       })
     end
   end

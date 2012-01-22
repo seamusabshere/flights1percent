@@ -1,0 +1,59 @@
+body .container {
+  width: 946px;
+  margin: 30px auto;
+}
+
+.nav {
+  overflow: auto;
+  padding: 0 0 10px;
+  font-family: SohoRegular;
+}
+
+.nav h1 {
+  text-indent: -9999px;
+  width: 105px;
+  height: 27px;
+  background: url(/images/logo.png);
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.nav h2 {
+  font-size: 18px;
+  float: left;
+  margin: 5px 0 0;
+}
+
+.nav h2 span {
+  color: #e64036;
+}
+
+.nav .links {
+  float: right;
+  list-style: none;
+  font-size: 18px;
+  margin: 5px 0 0
+}
+
+.nav .links li {
+  float: left;
+  width: 160px;
+}
+
+.nav .links li:before {
+  content: ">";
+  color: #e64036;
+  padding: 0 4px 0 0;
+}
+
+.nav .links li a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav .links li a:hover {
+  color: #0066CC;
+  text-decoration: underline;
+}
+
+

@@ -340,7 +340,12 @@ caption {
   float: right;
   margin-right: 20px;
 }
-/* line 53, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 46, ../../app/assets/stylesheets/partials/_app.scss */
+.banner .logoText a {
+  color: white;
+  text-decoration: none;
+}
+/* line 58, ../../app/assets/stylesheets/partials/_app.scss */
 .banner .downArrow {
   text-indent: -119988px;
   overflow: hidden;
@@ -360,7 +365,7 @@ caption {
   opacity: 0;
   cursor: pointer;
 }
-/* line 62, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 67, ../../app/assets/stylesheets/partials/_app.scss */
 .banner .downArrow:hover {
   -moz-box-shadow: white 1px 2px 10px;
   -webkit-box-shadow: white 1px 2px 10px;
@@ -368,19 +373,19 @@ caption {
   box-shadow: white 1px 2px 10px;
 }
 
-/* line 68, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 73, ../../app/assets/stylesheets/partials/_app.scss */
 .hide {
   display: none;
 }
 
-/* line 72, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 77, ../../app/assets/stylesheets/partials/_app.scss */
 .overlay {
   position: absolute;
   top: 60px;
   height: 800px;
   width: 100%;
 }
-/* line 78, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 83, ../../app/assets/stylesheets/partials/_app.scss */
 .overlay .bg {
   background: black;
   height: 100%;
@@ -389,73 +394,73 @@ caption {
   z-index: 1;
   position: absolute;
 }
-/* line 86, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 91, ../../app/assets/stylesheets/partials/_app.scss */
 .overlay .box {
   z-index: 2;
   position: relative;
   width: 1180px;
 }
-/* line 91, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 96, ../../app/assets/stylesheets/partials/_app.scss */
 .overlay .innerWrapper {
   margin: 0 auto;
   width: 1180px;
 }
-/* line 95, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 100, ../../app/assets/stylesheets/partials/_app.scss */
 .overlay .front {
   position: absolute;
 }
 
-/* line 109, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 114, ../../app/assets/stylesheets/partials/_app.scss */
 body .container {
   width: 100%;
 }
-/* line 112, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 117, ../../app/assets/stylesheets/partials/_app.scss */
 body .box {
   padding: 0px 0;
   margin: 0;
   border-bottom: solid 1px #ccc;
   background: url('../images/flexBoxBg.png?1327243451') repeat-x;
   width: 100%;
-  height: 600px;
+  height: 700px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 120, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 125, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .name {
   font-family: "SohoRegular";
 }
-/* line 125, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 130, ../../app/assets/stylesheets/partials/_app.scss */
 body .box h1, body .box h2, body .box h3, body .box h4 {
   color: white;
 }
-/* line 126, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 131, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.offState {
   background: none;
   cursor: pointer;
 }
-/* line 129, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 134, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.offState h1 {
   margin: 34.5px 0 34.5px 30px;
 }
-/* line 133, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 138, ../../app/assets/stylesheets/partials/_app.scss */
 body .box h3 {
   font-size: 2em;
   margin: 20px 0 10px 0;
   border-bottom: solid 3px white;
   padding-bottom: 10px;
 }
-/* line 141, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 146, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent {
   color: white;
   float: left;
   width: 800px;
   margin-left: 20px;
 }
-/* line 148, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 153, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .bio {
   font-family: "SohoRegular";
 }
-/* line 150, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 155, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .peopleIndex {
   background: url('../images/plane_equal_icon.png?1327243451') no-repeat left top;
   padding-left: 220px;
@@ -465,223 +470,223 @@ body .box .boxContent .peopleIndex {
   font-family: SohoGothicRegular, sans;
   margin-bottom: 20px;
 }
-/* line 160, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 165, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .boxContent .peopleIndex h4 {
   margin-bottom: 0;
   line-height: 1em;
   font-family: SohoGothicUltra, sans;
 }
-/* line 170, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 175, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .datapoints h4 {
   font-family: "SohoGothicRegular";
 }
-/* line 175, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 180, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar {
   float: left;
   height: 100%;
   width: 337px;
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.billgates {
   background-image: url('../images/profile_pics/billgates.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.bobdylan {
   background-image: url('../images/profile_pics/bobdylan.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.jerrybruckheimer {
   background-image: url('../images/profile_pics/jerrybruckheimer.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.johntravolta {
   background-image: url('../images/profile_pics/johntravolta.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.kochbrothers {
   background-image: url('../images/profile_pics/kochbrothers.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.markcuban {
   background-image: url('../images/profile_pics/markcuban.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.michaelbloomberg {
   background-image: url('../images/profile_pics/mikebloomberg.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.morganfreeman {
   background-image: url('../images/profile_pics/morganfreeman.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.oprah {
   background-image: url('../images/profile_pics/oprahwinfrey.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.paulallen {
   background-image: url('../images/profile_pics/paulallen.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.philknightnike {
   background-image: url('../images/profile_pics/philknight.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.rupertmurdoch {
   background-image: url('../images/profile_pics/rupertmurdoch.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.rushlimbaugh {
   background-image: url('../images/profile_pics/rushlimbaugh.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.larrysergey {
   background-image: url('../images/profile_pics/sergeyandlarry.jpg?1327243451');
 }
-/* line 184, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_app.scss */
 body .box .sidebar.stevejobs {
   background-image: url('../images/profile_pics/stevejobs.jpg?1327243451');
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-1 {
   background-color: black;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-1:hover {
   background-color: #1a1a1a;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-2 {
   background-color: #6bb34d;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-2:hover {
   background-color: #89c271;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-3 {
   background-color: #595a5c;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-3:hover {
   background-color: #727376;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-4 {
   background-color: #bc2026;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-4:hover {
   background-color: #dc3339;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-5 {
   background-color: #3398d4;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-5:hover {
   background-color: #5daddd;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-6 {
   background-color: #96a89c;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-6:hover {
   background-color: #b2bfb6;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-7 {
   background-color: #eeb11e;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-7:hover {
   background-color: #f2c14d;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-8 {
   background-color: #ae8782;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-8:hover {
   background-color: #c2a5a1;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-9 {
   background-color: #604839;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-9:hover {
   background-color: #80604c;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-10 {
   background-color: #60b0af;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-10:hover {
   background-color: #82c1c0;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-11 {
   background-color: #6a141e;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-11:hover {
   background-color: #951c2a;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-12 {
   background-color: #9a857a;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-12:hover {
   background-color: #b0a097;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-13 {
   background-color: #b8d433;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-13:hover {
   background-color: #c7dd5d;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-14 {
   background-color: #8383a9;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-14:hover {
   background-color: #a1a1be;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-15 {
   background-color: #56a774;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-15:hover {
   background-color: #77b98f;
 }
-/* line 195, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 200, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-16 {
   background-color: #f68b67;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.color-16:hover {
   background-color: #f9b097;
 }
-/* line 207, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 212, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro {
   background-image: url('../images/jet.jpg?1327243451');
   background-position: center;
   background-repeat: no-repeat;
   color: white;
 }
-/* line 213, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 218, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent {
   width: 80%;
   margin: 100px 5% 0 10%;
 }
-/* line 218, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 223, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent .smallplane {
   text-indent: -119988px;
   overflow: hidden;
@@ -693,19 +698,19 @@ body .box.intro .boxContent .smallplane {
   height: 24px;
   margin-bottom: 10px;
 }
-/* line 222, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 227, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent h1 {
   font-family: "SohoGothicBold";
   font-size: 10em;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
-/* line 228, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 233, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent p {
   font-family: "SohoRegular";
   font-size: 2em;
 }
-/* line 232, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 237, ../../app/assets/stylesheets/partials/_app.scss */
 body .box.intro .boxContent .show_me {
   font-family: "SohoBold";
   text-decoration: none;
@@ -714,11 +719,11 @@ body .box.intro .boxContent .show_me {
   padding: 10px 20px;
   font-size: 2em;
 }
-/* line 249, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 254, ../../app/assets/stylesheets/partials/_app.scss */
 body .content {
   position: relative;
 }
-/* line 255, ../../app/assets/stylesheets/partials/_app.scss */
+/* line 260, ../../app/assets/stylesheets/partials/_app.scss */
 body .container, body .content, body .footprintPanes {
   width: 100%;
   height: 1000px;

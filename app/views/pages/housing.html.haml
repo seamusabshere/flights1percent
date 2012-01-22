@@ -1,15 +1,15 @@
 
 .banner
-  .dataPaneTitle TRAVEL FOOTPRINT
+  .dataPaneTitle HOUSING FOOTPRINT
   .logoText 
     =link_to '1>99', '/'
   =link_to "", "javascript:;", :class=>"downArrow"
 .box.intro.color-1
   .boxContent
     .smallplane
-    %h1 Travel Footprint
+    %h1 Housing Footprint
     %p
-      Big shots like Donald Trump, Bill Gates and movie stars like Angelina Jolie and Oprah Winfrey zip around the world in their fancy private jets. However, we’re all paying a price for their luxuries. These titans have gargantuan carbon footprints. Here’s how they compare to each other and to you, the average Joe or Jane.
+      Big shots like Donald Trump, Bill Gates and movie stars like Tom Cruise and Lil Wayne live in the lap of luxury. However, we’re all paying a price for their opulence. These titans have gargantuan carbon footprints. Here’s how they compare to each other and to you, the average Joe or Jane.
     =link_to "Show me", "javascript:;", :class=>"show_me" 
 
 .footPrintPanes
@@ -32,7 +32,6 @@
         <div class="boxContent">
           <h3 class="name"><%=name%></h3>
           <div class="datapoints">
-            <h4>Total emissions per year: <%=emissions_per_year%> kg CO2</h4>
             <div class="peopleIndex">
               <h4><%=people_equivalent%></h4>
               Average People
