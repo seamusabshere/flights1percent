@@ -50,5 +50,12 @@ class FancyHouse < ActiveRecord::Base
       'Single-family detached house (a one-family house detached from any other house)'
     end
   end
-  
+
+  def average_houses
+    5.5 #FIXME
+  end
+
+  def blurb
+    'Lorem ipsum' #FIXME
+  end
 end
