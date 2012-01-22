@@ -1,5 +1,7 @@
 Flights1percent::Application.routes.draw do
 
+  resources :fancy_houses
+
   resources :domiciles
 
   resources :aircraft_registrations

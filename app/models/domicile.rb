@@ -7,6 +7,8 @@ class Domicile < ActiveRecord::Base
       end
     end
   end
+  
+  include Haus
 
   BUILDING_CLASSES = [
     /home/i,
@@ -40,7 +42,9 @@ class Domicile < ActiveRecord::Base
   col :bathrooms, :type => :float
   col :zillow_xml, :type => :text
   col :tried_zillow_at, :type => :datetime
-  
+  col :raw_emission_data, :type => :text
+  col :carbon_object_value, :type => :float
+    
   data_miner do
     import(
       "2011 New York City Sales Data",
@@ -64,12 +68,18 @@ class Domicile < ActiveRecord::Base
 
     # don't forget to pull details hey!
   end
+  
+  def floorspace_estimate
+    gross_square_feet * 0.09290304 # sq metres
+  end
     
-  # 'Apartment in a building with 5 or more units',
-  # 'Mobile home (manufactured home, trailer)',
-  # 'Single-family detached house (a one-family house detached from any other house)'
   def residence_class
-    #
+    case building_class_category
+    when /home/i
+      'Single-family detached house (a one-family house detached from any other house)'
+    else
+      'Apartment in a building with 5 or more units'
+    end
   end
   
   def enuf?
