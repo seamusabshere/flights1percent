@@ -6,6 +6,85 @@ class Flight < ActiveRecord::Base
       end
       nil
     end
+    
+    def flight_count
+      TAILS.each do |tail|
+        cnt = where(tail_number: tail).count
+        puts "#{tail}: #{cnt}"
+      end
+    end
+    
+    # BLANCA+PALOMA%2C+LLC
+    def tail_numbers(company)
+      header = { 'Accept' => 'application/json',
+                   'Referer' => "http://projects.wsj.com/jettracker/",
+                   'User-Agent' => USER_AGENT
+                 }
+
+        query = { 'term' => company, 'col' => 'tag_op'}
+
+        request = HTTPClient.get(
+              "http://projects.wsj.com/jettracker/autocomplete_lookup.php",
+              query, header
+              )
+
+      response = JSON.parse(request.body)
+      tail_numbers = response.collect{ |x| x['text']}.join(",")
+    end
+
+    def pull(tn)
+      # cache tail numbers
+      #tns = tail_numbers(company)
+      # Get and save the first page of flights so
+      # we can get the total count
+      flights = flight_results(tn, 0)
+      save_flights(flights, tn)
+      # Determine how many pages there are
+      count = flights['meta']['totalcount']
+      pages = (count.to_i / 50)
+      # Iterate through the remaining pages
+      (1..pages).each do |page|
+        flights = flight_results(tn, page)
+        save_flights(flights, tn)
+        sleep(10)
+      end if (pages > 0)
+    end
+
+    def save_flights(flights, tn)
+      flights['results'].each do |wsj_data|
+        flight = find_or_initialize_by_row_hash HashDigest.hexdigest(wsj_data)
+        flight.wsj_data = wsj_data
+        flight.tail_number = tn
+        flight.save!
+      end
+    end
+
+    # BLANCA%20PALOMA%2C%20LLC
+    #http://projects.wsj.com/jettracker/flights.php?op=BLANCA%20PALOMA%2C%20LLC&tag=N901SG&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=1&sort=d
+    def flight_results(tn, page = 0)
+
+      header = { 'Accept' => 'application/json',
+                   'Referer' => "http://projects.wsj.com/jettracker/",
+                   'User-Agent' => USER_AGENT
+                 }
+
+        query = { 'op' => '', 'tag' => tn, 'p' => page, 'sort' => 'd'}
+
+        request2 = HTTPClient.get(
+              "http://projects.wsj.com/jettracker/flights.php",
+              query, header
+              )
+
+      flights = MultiJson.decode(request2.body)
+    end
+
+    def set_emissions
+      while f = where(arel_table[:carbon_object_value].eq(nil)).order('random()').first
+        puts f.send(:request).inspect
+        f.set_emissions
+        puts "Emission set for #{f.row_hash}: #{f.carbon_object_value}"
+      end
+    end
   end
 
   set_primary_key :row_hash
@@ -43,88 +122,9 @@ N608WM N134WM N194WM N307MD N387WM N887WM )
 
   USER_AGENT = "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.23) Gecko/20110921 Ubuntu/10.10 (maverick) Firefox/3.6.23"
 
-  def self.flight_count
-    TAILS.each do |tail|
-      cnt = where(tail_number: tail).count
-      puts "#{tail}: #{cnt}"
-    end
-  end
-
-  # BLANCA+PALOMA%2C+LLC
-  def self.tail_numbers(company)
-    header = { 'Accept' => 'application/json',
-                 'Referer' => "http://projects.wsj.com/jettracker/",
-                 'User-Agent' => USER_AGENT
-               }
-
-      query = { 'term' => company, 'col' => 'tag_op'}
-
-      request = HTTPClient.get(
-            "http://projects.wsj.com/jettracker/autocomplete_lookup.php",
-            query, header
-            )
-
-    response = JSON.parse(request.body)
-    tail_numbers = response.collect{ |x| x['text']}.join(",")
-  end
-
-  def self.pull(tn)
-    # cache tail numbers
-    #tns = tail_numbers(company)
-    # Get and save the first page of flights so
-    # we can get the total count
-    flights = flight_results(tn, 0)
-    save_flights(flights, tn)
-    # Determine how many pages there are
-    count = flights['meta']['totalcount']
-    pages = (count.to_i / 50)
-    # Iterate through the remaining pages
-    (1..pages).each do |page|
-      flights = flight_results(tn, page)
-      save_flights(flights, tn)
-      sleep(10)
-    end if (pages > 0)
-  end
-
-  def self.save_flights(flights, tn)
-    flights['results'].each do |wsj_data|
-      flight = find_or_initialize_by_row_hash HashDigest.hexdigest(wsj_data)
-      flight.wsj_data = wsj_data
-      flight.tail_number = tn
-      flight.save!
-    end
-  end
-
-  # BLANCA%20PALOMA%2C%20LLC
-  #http://projects.wsj.com/jettracker/flights.php?op=BLANCA%20PALOMA%2C%20LLC&tag=N901SG&dc=&ac=&dds=&dde=&ads=&ade=&any_city=&p=1&sort=d
-  def self.flight_results(tn, page = 0)
-
-    header = { 'Accept' => 'application/json',
-                 'Referer' => "http://projects.wsj.com/jettracker/",
-                 'User-Agent' => USER_AGENT
-               }
-
-      query = { 'op' => '', 'tag' => tn, 'p' => page, 'sort' => 'd'}
-
-      request2 = HTTPClient.get(
-            "http://projects.wsj.com/jettracker/flights.php",
-            query, header
-            )
-
-    flights = MultiJson.decode(request2.body)
-  end
-
   def set_emissions
     emission_data
     save!
-  end
-
-  def self.set_emissions
-    while f = where(arel_table[:carbon_object_value].eq(nil)).order('random()').first
-      puts f.send(:request).inspect
-      f.set_emissions
-      puts "Emission set for #{f.row_hash}: #{f.carbon_object_value}"
-    end
   end
 
   def wsj_data
