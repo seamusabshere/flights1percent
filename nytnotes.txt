@@ -1,8 +1,10 @@
+The gist of the project is that we wanted to see if 1%ers had a disproportionate impact on the environment, compared to the "rest of us." In the end, we found the gap to be almost shockingly wide. Here's a play-by-play: 
+
 * Shortly after our group got together, we decided we wanted to focus on using hard numbers to quantify the difference between the "1%" and the rest of us.
 
 * We came up with the idea of the 1v99.org site, which would have various "modules" that examined specific aspects of "the gap." Since we were at an environmental hackathon, we were going to begin with a couple environment-focused topics: transportation and housing.
 
-* We knew we wanted to make our analysis data-driven, and a few of us had good experience with the Brighter Planet environmental impact calculation API (CM1), so we set out to find datasets that we could perform calcluations on that would reveal the disparity we all expected to find.
+* We knew we wanted to make our analysis data-driven, and a few of us had good experience with the Brighter Planet environmental impact calculation API (CM1), so we set out to find datasets that we could perform calculations on that would reveal the disparity we all expected to find.
 
 * We all really like a dataset that the Wall Street Journal had assembled which contained individual flight records for all of the private jet traffic between U.S. airports going back to 2007.
 
@@ -12,7 +14,7 @@
 
 * By running all this data through the Brighter Planet API we could have calculated a rough idea of each of our selected 1%er's flight footprint. But--again in the spirit of hackathons--we wanted to get it right. We knew, for example, that one of John Travolta's private jets was a bona fide 747, not a little Leer jet that sips jet fuel, but a real guzzler. Until we were able to tie each flight to the actual model of aircraft used, the picture would still be incomplete.
 
-* So we did some digging and ended up cross-referencing both our celebrity aircraft database and the Wall Street Journal private jet records database with a third dataset, the FAA aircraft registry, which links tail numbers to aircraft models. The Brighter Planet API can accept these model codes and derive a specific "fuel effiency" (kind of like mpg) value for them, so we ended up with a much more accurate representation of these footprints, and with additional contrast among the celebrities.
+* So we did some digging and ended up cross-referencing both our celebrity aircraft database and the Wall Street Journal private jet records database with a third dataset, the FAA aircraft registry, which links tail numbers to aircraft models. The Brighter Planet API can accept these model codes and derive a specific "fuel effciency" (kind of like mpg) value for them, so we ended up with a much more accurate representation of these footprints, and with additional contrast among the celebrities.
 
 * The results were even more ridiculous than we had expected. The Koch brothers--choice villains of the Occupy movement--weighed in with a footprint over 6,000 times that of an Average Joe. We did cheer when the calculations were completed for favorites of ours like Morgan Freeman and Bob Dylan and came out fairly low--21x and 42x average, respectively.
 
@@ -21,3 +23,5 @@
 * We ended up with a database of about 15 home-sweet-homes, owned by folks like Mayor Bloomberg and Tom Cruise. The results this time were in some ways more down-to-earth--Derek Jeter's house, for example, makes an environmental impact only 18 times that of a run-of-the-mill abode. Just goes to show how skewed our perceptions got running the flights analysis.
 
 * We're hoping that we can keep producing more modules like these, breaking down the difference between the 1% and the 99% in a data-driven way. The whole project's open source, so if anybody would like to get involved, please get in touch: we're @1v99org on Twitter.
+
+Besides seeing this environmental impact gap quantified like this, our biggest takeaway was how powerful this type of analysis can be. We saw first-hand how relatively quick one-off data research projects could be a significant tool for groups of people--like the Occupy folks--to explain what it is they're fighting for. Sure, a picture speaks a thousand words, but sometimes what you really need is a number.
