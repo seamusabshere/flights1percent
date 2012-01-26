@@ -18,7 +18,7 @@ class FancyHouse < ActiveRecord::Base
   
   data_miner do
     import(
-      "fancy houses scraped by David and Andy",
+      "fancy houses",
       :url => 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AtyCBJLCFHlwdGpjQ2dQYkN6TnkzYlBPZXVfNUFrOHc&single=true&gid=0&output=csv',
       :select => Proc.new { |row| row['name'].present? }
     ) do
